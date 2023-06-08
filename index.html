@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Frontend Mentor | Formulário de detalhes do cartão interativo</title>
+  </head>
+  <body>
+    <main class="container">
+      <img
+        class="main-mobile"
+        src="images/bg-main-mobile.png"
+        alt="main-mobile"
+      />
+      <img
+        class="main-desktop"
+        src="images/bg-main-desktop.png"
+        alt="bg-main-desktop"
+      />
+
+      <section class="picture-card-back">
+        <img class="card-back" src="images/bg-card-back.png" alt="card-back" />
+        <h2 class="line4">000</h2>
+      </section>
+
+      <section class="picture-card-front">
+        <img
+          class="card-front"
+          src="images/bg-card-front.png"
+          alt="card-front"
+        />
+
+        <div class="inside-card-front">
+          <img src="images/card-logo.svg" alt="card-front-logo" />
+          <h2 class="line1">0000 0000 0000 0000</h2>
+          <h2 class="line2">U MIRANHA</h2>
+          <h2 class="line3">00/00</h2>
+        </div>
+      </section>
+
+      <section class="dice">
+        <div class="form">
+          <h1>Nome do Titular</h1>
+          <input
+            type="text"
+            maxlength="26"
+            id="cardHolder"
+            placeholder="U MIRANHA"
+          />
+
+          <h2>Numero do cartão</h2>
+          <input
+            type="text"
+            maxlength="19"
+            id="cardNumber"
+            placeholder="1234 5678 9123 0000"
+            required
+            onkeypress="format('0000 0000 0000 0000', this)"
+          />
+
+          <div class="date">
+            <h3>DATA DE VENC. (MM/YY)</h3>
+            <h3>CVC</h3>
+          </div>
+
+          <input type="text" maxlength="2" id="mm" placeholder="MM" />
+          <input type="text" maxlength="2" id="yy" placeholder="YY" />
+          <input type="text" maxlength="3" id="cvc" placeholder="123" />
+          <button type="submit" id="confirm">Confirmar</button>
+        </div>
+        <div class="submit">
+          <img
+            class="submit-logo"
+            src="images/icon-complete.svg"
+            alt="icon-complete"
+          />
+          <p class="thank-you">Obrigado amigo!</p>
+          <p class="message">Você é um amigo</p>
+          <button id="continue">Continue</button>
+        </div>
+      </section>
+    </main>
+    <script defer src="script/script.js"></script>
+  </body>
+</html>
